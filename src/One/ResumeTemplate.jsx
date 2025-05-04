@@ -265,6 +265,7 @@
 import React, { forwardRef, useRef } from "react";
 import { useReactToPrint } from "react-to-print";
 import styles from "./ResumeTemplate.module.css";
+import ResumeForm from "./ResumeForm";
 
 const ResumeTemplate = () => {
   const resumeRef = useRef(null);
@@ -284,6 +285,7 @@ const ResumeTemplate = () => {
   });
   return (
     <div>
+      <ResumeForm></ResumeForm>
       <button
         onClick={handlePrint}
         className="mb-4 px-4 py-2 bg-blue-600 text-white rounded"
