@@ -1,0 +1,63 @@
+.footer {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.header {
+  position: relative;
+  transition: height 1s ease;
+}
+html.show-modal .header {
+  height: 150px;
+}
+.header__logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform-origin: top left;
+  transform: translateX(-50%) scale(1);
+  transition: all 1s ease-in-out;
+}
+html.show-modal .header__logo {
+  left: 0;
+  transform: translateX(0) scale(0.6);
+}
+.header__navbar {
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 1s ease;
+}
+
+html.show-modal .header__navbar {
+  top: 40px;
+  right: 0;
+  transform: translateX(0);
+  transition: all 1s ease;
+}
+
+.swiper-slide-active {
+  transition: all 1s ease;
+}
+.mySwiper {
+  opacity: 100%;
+  height: fit-content;
+  transition: all 1s ease;
+}
+html.show-modal .mySwiper {
+  opacity: 0;
+  height: 0;
+}
+#modal {
+  opacity: 0%;
+
+  transition: all 1s ease;
+  pointer-events: none;
+}
+html.show-modal #modal {
+  opacity: 100%;
+
+  pointer-events: auto;
+}
